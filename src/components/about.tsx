@@ -1,16 +1,18 @@
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const About = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides = [
-    "/images/burgerTeam.jpg",
-    "/images/cheeseBurger.jpg",
-    "/images/burgerCustomers.jpg",
-    "/images/baconBurger.jpg",
-    "/images/restaurant.jpg",
-    "/images/chickenSandwich.jpg"
-  ];
+  "/burgerrestaurantreact/images/burgerTeam.jpg",
+  "/burgerrestaurantreact/images/cheeseBurger.jpg",
+  "/burgerrestaurantreact/images/burgerCustomers.jpg",
+  "/burgerrestaurantreact/images/baconBurger.jpg",
+  "/burgerrestaurantreact/images/restaurant.jpg",
+  "/burgerrestaurantreact/images/chickenSandwich.jpg"
+];
+
 
   // Function to show the current slide
 
@@ -29,10 +31,10 @@ const About = () => {
         <nav>
           <div className="logo">The Burger Den</div>
           <ul className="nav-links">
-            <li><a href="/home">Home</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
           <div className="hamburger">&#9776;</div>
         </nav>

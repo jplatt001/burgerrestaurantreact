@@ -11,11 +11,12 @@ const App: React.FC = () => {
       <div className="flex flex-col min-h-screen">
         <main className="flex-grow">
           <Routes>
+            <Route path="/" element={<Home />} />  {/* <-- Default landing page */}
             <Route path="/home" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-          </Routes>
+            </Routes>
         </main>
       </div>
     </Router>

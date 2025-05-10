@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {useState } from 'react';
 
 const Menu = () => {
@@ -30,10 +31,10 @@ const Menu = () => {
         <nav className="nav">
           <div className="logo">The Burger Den</div>
           <ul className="nav-links">
-            <li><a href="/home">Home</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
       </header>
@@ -46,7 +47,7 @@ const Menu = () => {
           {/* Menu Item: Cheese Burger */}
           <div className="item">
             <div className="bg-white rounded-xl overflow-hidden shadow-md">
-              <img src="/images/cheeseBurger.jpg" alt="Cheese Burger" className="menu-img"/>
+              <img src= "/burgerrestaurantreact/images/cheeseBurger.jpg" alt="Cheese Burger" className="menu-img"/>
             </div>
             <h3 className="text-2xl font-semibold mb-2 text-[#642800]">Cheese Burger</h3>
             <p className="text-xl font-medium">$10</p>
@@ -57,7 +58,7 @@ const Menu = () => {
           {/* Menu Item: Bacon Burger */}
           <div className="item">
             <div className="bg-white rounded-xl overflow-hidden shadow-md">
-              <img src="/images/baconBurger.jpg" alt="Bacon Burger" className="menu-img" />
+              <img src="/burgerrestaurantreact/images/baconBurger.jpg" alt="Bacon Burger" className="Bacon-Burger" />
             </div>
             <h3 className="text-2xl font-semibold mb-2 text-[#642800]">Bacon Burger</h3>
             <p className="text-xl font-medium">$12</p>
@@ -67,7 +68,7 @@ const Menu = () => {
           {/* Menu Item: Chicken Sandwich */}
           <div className="item">
             <div className="bg-white rounded-xl overflow-hidden shadow-md">
-              <img src="/images/chickenSandwich.jpg" alt="Chicken Sandwich" className="menu-img"/>
+              <img src="/burgerrestaurantreact/images/chickenSandwich.jpg" alt="Chicken Sandwich" className="Chicken Sandwich"/>
             </div>
             <h3 className="text-2xl font-semibold mb-2 text-[#642800]">Chicken Sandwich</h3>
             <p className="text-xl font-medium">$9</p>
