@@ -1,25 +1,18 @@
 {
-  "name": "burger-den",
-  "private": true,
+  "name": "restaurantreact",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.4",
-    "@types/react-dom": "^19.1.2",
-    "@types/react-router-dom": "^5.3.3",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.6",
-    "typescript": "~5.7.2",
-    "vite": "^6.3.3"
+    "@vitejs/plugin-react": "^4.0.0",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5.0.0",
+    "vite": "^6.3.5"
   },
-  "dependencies": {
-    "@vitejs/plugin-react": "^4.4.1",
-    "react-router-dom": "^7.5.2"
-  }
+  "homepage": "https://jplatt001.github.io/burgerrestaurantreact"
 }
