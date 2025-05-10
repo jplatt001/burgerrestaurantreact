@@ -4,6 +4,8 @@ import {useState } from 'react';
 const Menu = () => {
   const [cart, setCart] = useState<{ name: string, price: number, quantity: number }[]>([]);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const addToCart = (name: string, price: number) => {
     const existingItem = cart.find(item => item.name === name);
     
@@ -30,12 +32,15 @@ const Menu = () => {
       <header className="header">
         <nav className="nav">
           <div className="logo">The Burger Den</div>
-          <ul className="nav-links">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/menu">Menu</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            &#9776;
+            </div>
+            <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+              <li><Link to="/home">Home</Link></li>
+              <li><Link to="/menu">Menu</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              </ul>
         </nav>
       </header>
 

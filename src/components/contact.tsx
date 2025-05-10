@@ -1,18 +1,23 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import "../styles.css";
 
 function Contact() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="background">
       <header className="header">
         <nav className="nav">
           <div className="logo">The Burger Den</div>
-          <ul className="nav-links">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/menu">Menu</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            &#9776;
+            </div>
+            <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+              <li><Link to="/home">Home</Link></li>
+              <li><Link to="/menu">Menu</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              </ul>
         </nav>
       </header>
 
